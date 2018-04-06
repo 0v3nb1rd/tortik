@@ -20,6 +20,7 @@ var csso = require("gulp-csso"),
     htmlhint = require("gulp-htmlhint"),
     htmlmin = require("gulp-htmlmin"),
     uglify = require("gulp-uglify");
+    // materialize = require("materialize-css");
 ///////////////////////////////////////////////////////////
 
 
@@ -30,7 +31,7 @@ gulp.task("clear", function() {
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    // "source/img/**",
+    "source/css/**.css",
     "source/js/**/*.js"], {
       base: "./source/"
     })
