@@ -119,7 +119,7 @@ gulp.task("build", function(done) {
   run(
     "clear", "copy", "imgmin",
     "style", "sprite", "html",
-    "minjs", "webp", done);
+    /*"minjs",*/ "webp", done);
 });
 
 gulp.task("minify", function() {
