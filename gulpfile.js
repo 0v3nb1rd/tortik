@@ -32,7 +32,7 @@ gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/css/**.css",
-    "source/js/**/*.js"], {
+    "source/js/bin/*.js"], {
       base: "./source/"
     })
   .pipe(gulp.dest("build"));
@@ -57,7 +57,7 @@ gulp.task("html", function() {
 
 //////////////////////////////////////////////////////////
 gulp.task("style", function() {
-  gulp.src("source/sass/style.scss")
+  gulp.src("source/sass/materialize.scss")
     .pipe(plumber())
     .pipe(sass({
       outputStyle: 'expanded',
@@ -68,7 +68,7 @@ gulp.task("style", function() {
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(csso())
-    .pipe(rename("style-min.css"))
+    .pipe(rename("materialize.min.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });

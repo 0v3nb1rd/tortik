@@ -4,17 +4,71 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/style-min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
     <body>
-      <a class="btn-floating red pulse"><i class="material-icons">menu</i></a>
-      <a class="btn-floating btn-large pulse"><i class="material-icons">cloud</i></a>
+      <nav>
+        <div class="nav-wrapper container">
+          <a href="#" class="brand-logo ">Tortik</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Про нас</a></li>
+            <li><a href="badges.html">Галерея</a></li>
+            <li><a href="collapsible.html">Контакти</a></li>
+          </ul>
+        </div>
+      </nav>
+      <header>
+        <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="img/86052179.jpg" alt="">
+        <div class="caption left-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/8505_Delicious-fruit-cake-HD.jpg" alt="">
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/torta-s-jahodami-224624.jpg" alt="">
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/fce1fc56bc4577d76929f515e52e16e6.jpg" alt="">
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+      </header>
+
 
       <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/bin/jquery-3.3.1.min.js"></script>
       <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script>
+        $(document).ready(function(){
+            $('.slider').slider({
+              // indicators:false,
+              duration:800,
+              interval:7000,
+              height:800,
+            });
+          });
+      </script>
     </body>
   </html>
