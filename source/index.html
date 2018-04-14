@@ -99,6 +99,7 @@
 
         <section class="features">
           <div class="container">
+            <h2 class="center">Переваги:</h2>
             <div class="row">
                 <div class="col s4 center-align">
                   <svg class="features__icon" width="77.6px" height="77.6px">
@@ -131,11 +132,12 @@
 
         <section class="gallery materialize-red lighten-2">
           <div class="container">
+            <h2 class="center white-text">Тортики:</h2>
             <div class="row">
               <div class="col s12 m6 l4 xl3">
                 <div class="card hoverable">
                   <div class="card-image">
-                    <img src="img/Happy-Birthday-Love-Cake.jpg">
+                    <img class="materialboxed" src="img/Happy-Birthday-Love-Cake.jpg">
                     <span class="card-title">Card Title</span>
                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                   </div>
@@ -148,7 +150,7 @@
               <div class="col s12 m6 l4 xl3">
                 <div class="card hoverable">
                   <div class="card-image">
-                    <img src="img/Happy-Birthday-Love-Cake.jpg">
+                    <img class="materialboxed" src="img/Happy-Birthday-Love-Cake.jpg">
                     <span class="card-title">Card Title</span>
                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                   </div>
@@ -161,7 +163,7 @@
               <div class="col s12 m6 l4 xl3">
                 <div class="card hoverable">
                   <div class="card-image">
-                    <img src="img/Happy-Birthday-Love-Cake.jpg">
+                    <img class="materialboxed" src="img/Happy-Birthday-Love-Cake.jpg">
                     <span class="card-title">Card Title</span>
                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                   </div>
@@ -174,7 +176,7 @@
               <div class="col s12 m6 l4 xl3">
                 <div class="card hoverable">
                   <div class="card-image">
-                    <img src="img/Happy-Birthday-Love-Cake.jpg">
+                    <img class="materialboxed" src="img/Happy-Birthday-Love-Cake.jpg">
                     <span class="card-title">Card Title</span>
                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                   </div>
@@ -185,6 +187,46 @@
               </div>
 
 
+            </div>
+          </div>
+        </section>
+
+        <section class="contacts container">
+          <h2 class="center">Контакти:</h2>
+          <div class="row valign-wrapper">
+            <form class="col m5">
+
+              <legend>Заповніть цю форму щоб ми змогли зконтактуватись з вами</legend>
+              <!-- <div class="row"> -->
+                <div class="input-field col m12">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="icon_prefix" type="text" class="validate">
+                  <label for="icon_prefix">імя</label>
+                </div>
+                <div class="input-field col m6">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="icon_telephone" type="tel" class="validate">
+                  <label for="icon_telephone">тел.</label>
+                </div>
+                <div class="input-field col m6">
+                  <i class="material-icons prefix">mail_outline</i>
+                  <input id="email" type="email" class="validate">
+                  <label for="email">Ваш email</label>
+                  <!-- <span class="helper-text" data-error="wrong" data-success="right">Відповімо поштою</span> -->
+                </div>
+                <div class="input-field col m12">
+                  <i class="material-icons prefix">mode_edit</i>
+                  <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                  <label for="icon_prefix2">мене цікавить...</label>
+                </div>
+                <button class="btn waves-effect waves-light btn-large col m10 offset-m1" type="submit" name="action">Відправити
+                  <i class="material-icons right">send</i>
+                </button>
+              <!-- </div> -->
+            </form>
+
+            <div class="col m6 offset-m1">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29268.341913791915!2d23.969881136691384!3d49.81295984327355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae775b1900001%3A0x7896a730c551a59e!2sTov+Sknylivok!5e0!3m2!1sen!2sua!4v1523714796128" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
           </div>
         </section>
@@ -227,6 +269,7 @@
       <script>
         $(document).ready(function(){
           $('.sidenav').sidenav();
+          $('.materialboxed').materialbox();
           $('.slider').slider({
             // indicators:false,
             duration:800,
