@@ -1,0 +1,21 @@
+.sprite-svg {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.svg-style{
+  // fill: #000;
+  transition: all 0.15s ease-out;
+
+  &:hover {
+      // background: #000;
+    fill: fade(#07c8d4, 70%);
+    transform: scale(1.5);
+  }
+}
+
+.popup__submit {
+  width: 100%;
+}

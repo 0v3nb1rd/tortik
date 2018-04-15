@@ -32,6 +32,7 @@ gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/css/**.css",
+    "source/img/*",
     "source/js/bin/*.js"], {
       base: "./source/"
     })
@@ -117,7 +118,7 @@ gulp.task("webp", function() {
 
 gulp.task("build", function(done) {
   run(
-    "clear", "copy", "imgmin",
+    "clear", "copy", /*"imgmin",*/
     "style", "sprite", "html",
     /*"minjs",*/ "webp", done);
 });
