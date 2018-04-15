@@ -1,3 +1,4 @@
+
 .sprite-svg {
   position: absolute;
   visibility: hidden;
@@ -18,4 +19,10 @@
 
 .popup__submit {
   width: 100%;
+}
+
+.btn-floating.btn-large.halfway-fab {
+  position: fixed;
+  top: 35px;
+  z-index: 10;
 }
