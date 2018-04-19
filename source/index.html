@@ -3,6 +3,7 @@
     <head>
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
@@ -18,16 +19,16 @@
         <div class="nav-wrapper">
           <div class="container">
             <a class="brand-logo">
-              <img src="img/logo.svg" alt="Tortik logo" height="64">
+              <img class="logotype" src="img/logo.svg" alt="Tortik logo" height="64">
             </a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">apps</i></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">dehaze</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="#about-us">Про нас</a></li>
-              <li><a href="#galery">Галерея</a></li>
-              <li><a href="#contacts">Контакти</a></li>
+              <li><a class="navigation__item" href="#about-us">Про нас</a></li>
+              <li><a class="navigation__item" href="#galery">Галерея</a></li>
+              <li><a class="navigation__item" href="#contacts">Контакти</a></li>
             </ul>
           </div>
-          <a class="btn-floating btn-large halfway-fab waves-effect pulse waves-light teal basket-btn">
+          <a class="btn-popup-itm btn-call btn-floating btn-large halfway-fab waves-effect pulse waves-light teal basket-btn">
             <i class="material-icons">local_grocery_store</i>
           </a>
         </div>
@@ -41,219 +42,219 @@
       <main>
         <div class="slider">
           <ul class="slides">
-            <li>
-              <img src="img/86052179.jpg" alt="">
-              <div class="caption left-align">
-                <h3>Наші тортики найсолодші!</h3>
-                <h5 class="light grey-text text-lighten-3">Переконаєтесь самі.</h5>
+            <li class="slides__item">
+              <img class="slides__img-1" src="img/pexels-photo-827513.jpeg" alt="">
+              <div class="slides__text-wrap-1 caption left-align">
+                <h3 class="slides__text-promo slides__text-promo--first">Наші тортики найсолодші!</h3>
+                <h5 class="slides__text-inner">Переконаєтесь самі.</h5>
               </div>
             </li>
-            <li>
+            <li class="slides__item">
               <img src="img/8505_Delicious-fruit-cake-HD.jpg" alt="">
-              <div class="caption left-align">
-                <h3>Найщасливіші тортики</h3>
-                <h5 class="light grey-text text-lighten-3">Наші клієнти залишають лише позитивні відгуки.</h5>
+              <div class="slides__text-wrap-2 caption left-align">
+                <h3 class="slides__text-promo slides__text-promo--second">Найщасливіші тортики</h3>
+                <h5 class="slides__text-inner">Наші клієнти залишають лише позитивні відгуки.</h5>
               </div>
             </li>
-            <li>
+            <li class="slides__item">
               <img src="img/torta-s-jahodami-224624.jpg" alt="">
-              <div class="caption right-align">
-                <h3>Екологічно чисті продукти</h3>
-                <h5 class="light grey-text text-lighten-3">Лише якісні продукти </h5>
+              <div class="slides__text-wrap-3 caption center-align">
+                <h3 class="slides__text-promo slides__promo-text--third">Екологічно чисті продукти</h3>
+                <h5 class="slides__text-inner">Лише якісні продукти </h5>
               </div>
             </li>
-            <li>
-              <img src="img/fce1fc56bc4577d76929f515e52e16e6.jpg" alt="">
-              <div class="caption center-align">
-                <h3>Неймовірні враження!</h3>
-                <h5 class="light grey-text text-lighten-3">Наші тортики залишають лише позитивні враження.</h5>
+            <li class="slides__item">
+              <img class="slides__img-4" src="img/Happy-birthday-cake-and-candle-lights-on-it-wallpapers.jpg" alt="">
+              <div class="slides__text-wrap-4 caption center-align">
+                <h3 class="slides__text-promo slides__promo-text--fouth">Неймовірні враження!</h3>
+                <h5 class="slides__text-inner">Наші тортики залишають лише позитивні враження.</h5>
               </div>
             </li>
           </ul>
         </div>
 
         <section id="about-us" class="about-us section container center scrollspy">
-          <h1><span class="materialize-red-text text-lighten-2">Найсмаковитіші</span> тортики Львова</h1>
-          <p class="flow-text">
+          <h1 class="about-us__text-promo"><span class="materialize-red-text text-lighten-2">Найсмаковитіші</span> тортики Львова</h1>
+          <p class="about-us__text-other">
             Вас вітає <b>tortik.ga</b> стильна кондитерська з молодим, амбітним колективом.<br>
             Ми готові робити для Вас яскраві, оригінальні вироби з тіста: торти, капкейкі, макаруни, печиво та багато іншого.<br>
             Тільки індивідуальний підхід до кожного замовника, тільки виняткові смаки, тільки якісна сировина!
           </p>
-          <p>Наші торти призначені для тих, хто ще молодий душею і шалено щасливий поласувати смачним десертом! Торт на замовлення Київ - швидка і легка можливість отримати вишукані і барвистий десерт в необхідний Вам термін! Вам слід просто подзвонити нам, і ми обговоримо з Вами дизайн і начинку Вашого персонального святкового торта. Свіжі і казкові кондитерські вироби будуть доставлені прямо до Ваших дверей або до місця, де Ви плануєте відзначати Ваше подія!</p>
-          <a class="waves-effect waves-teal btn-large white grey-text">Button</a>
+          <!-- <p>Наші торти призначені для тих, хто ще молодий душею і шалено щасливий поласувати смачним десертом! Торт на замовлення Київ - швидка і легка можливість отримати вишукані і барвистий десерт в необхідний Вам термін! Вам слід просто подзвонити нам, і ми обговоримо з Вами дизайн і начинку Вашого персонального святкового торта. Свіжі і казкові кондитерські вироби будуть доставлені прямо до Ваших дверей або до місця, де Ви плануєте відзначати Ваше подія!</p> -->
+          <a class="about-us__btn waves-effect waves-teal btn-large white grey-text">Замовити</a>
         </section>
 
-        <section class="section materialize-red lighten-2">
-          <div class="container">
+        <section class="price materialize-red lighten-2">
+          <div class="container price__container">
             <div class="row">
-              <div class="col m6 white-text">
-                <!-- <img class="left" src="img/cat-eats-cake-1.jpg" width="400" alt=""> -->
-                <h2>І скільки це мені обійдеться?</h2>
+              <div class="price__text-wrap white-text col s12 m6 l6 ">
+                <h2 class="price__text">І скільки це мені обійдеться?</h2>
                 <table>
-                        <thead>
-                          <tr>
-                              <th>Name</th>
-                              <th>Item Name</th>
-                              <th>Item Price</th>
-                          </tr>
-                        </thead>
+                  <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Item Name</th>
+                        <th>Item Price</th>
+                    </tr>
+                  </thead>
 
-                        <tbody>
-                          <tr>
-                            <td>Alvin</td>
-                            <td>Eclair</td>
-                            <td>$0.87</td>
-                          </tr>
-                          <tr>
-                            <td>Alan</td>
-                            <td>Jellybean</td>
-                            <td>$3.76</td>
-                          </tr>
-                          <tr>
-                            <td>Jonathan</td>
-                            <td>Lollipop</td>
-                            <td>$7.00</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                  <tbody>
+                    <tr>
+                      <td>Alvin</td>
+                      <td>Eclair</td>
+                      <td>$0.87</td>
+                    </tr>
+                    <tr>
+                      <td>Alan</td>
+                      <td>Jellybean</td>
+                      <td>$3.76</td>
+                    </tr>
+                    <tr>
+                      <td>Jonathan</td>
+                      <td>Lollipop</td>
+                      <td>$7.00</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div class="col m6">
-                <img class="right" src="img/Woman-cake.jpg" alt="" >
+              <div class="price__img-wrap col s12 m6 l6">
+                <img class="price__img" src="img/Woman-cake.jpg" alt="" >
               </div>
             </div>
           </div>
         </section>
 
-        <section class="features section">
+        <section class="features">
           <div class="container">
-            <h2 class="center">Переваги:</h2>
+            <h2 class="features__h2 center">Переваги:</h2>
             <div class="row">
-                <div class="col s4 center-align">
+                <div class="features__item center-align col s10 offset-s1 m4 offset-m0">
                   <svg class="features__icon" width="77.6px" height="77.6px">
                     <use xlink:href="#icon-time"></use>
                   </svg>
-                  <h3>Швидко</h3>
-                  <p>Ми виконуємо усі процесси швидко,<br>
+                  <h3 class="features__promo">Швидко</h3>
+                  <p class="features__text">Ми виконуємо усі процесси швидко,<br>
                   та якісно одночасно!</p>
                   <!-- Promo Content 1 goes here -->
                 </div>
-                <div class="col s4 center-align">
+                <div class="features__item center-align col s10 offset-s1 m4 offset-m0">
                   <svg class="features__icon" width="77.6px" height="77.6px">
                     <use xlink:href="#icon-users"></use>
                   </svg>
-                  <h3>Наша креативність</h3>
-                  <p>Підберемо якісний та кретивний виріб</p>
+                  <h3 class="features__promo">Наша креативність</h3>
+                  <p class="features__text">Підберемо якісний та кретивний виріб</p>
                   <!-- Promo Content 2 goes here -->
                 </div>
-                <div class="col s4 center-align">
+                <div class="features__item center-align col s10 offset-s1 m4 offset-m0">
                   <svg class="features__icon" width="77.6px" height="77.6px">
                     <use xlink:href="#icon-gps"></use>
                   </svg>
-                  <h3>Безкоштовна доставка</h3>
-                  <p>Жителям Львова ми доставимо замовлення безкоштовно!</p>
+                  <h3 class="features__promo">Безкоштовна доставка</h3>
+                  <p class="features__text">Жителям Львова ми доставимо замовлення безкоштовно!</p>
                   <!-- Promo Content 3 goes here -->
                 </div>
             </div>
           </div>
         </section>
 
-        <section id="galery" class="gallery section materialize-red lighten-2 scrollspy">
-          <div class="container">
-            <h2 class="center white-text">Тортики:</h2>
+        <section id="galery" class="galery section materialize-red lighten-2 scrollspy">
+          <div class="container galery__container">
+            <h2 class="galery__title center white-text">Тортики:</h2>
+
             <div class="row">
-              <div class="col s12 m6 l4 xl3">
+              <div class=" col s10 offset-s1 m6 l3">
                 <div class="card hoverable">
                   <div class="card-image">
-                    <img class="materialboxed" src="img/Happy-Birthday-Love-Cake.jpg">
-                    <span class="card-title">Card Title</span>
+                    <img class="materialboxed" src="img/galery/cake-flower.jpg">
+                    <span class="galery__card-title card-title">Протеїновий</span>
                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                   </div>
                   <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    <p class="galery__card-txt">I am a very simple card. I am good at containing small bits of information.</p>
                   </div>
                 </div>
               </div>
 
-              <div class="col s12 m6 l4 xl3">
+              <div class="col s10 offset-s1 m6 l3 ">
                 <div class="card hoverable">
                   <div class="card-image">
-                    <img class="materialboxed" src="img/Happy-Birthday-Love-Cake.jpg">
-                    <span class="card-title">Card Title</span>
+                    <img class="materialboxed" src="img/galery/cake-children.jpg">
+                    <span class="galery__card-title card-title">Протеїновий</span>
                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                   </div>
                   <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    <p class="galery__card-txt">I am a very simple card. I am good at containing small bits of information.</p>
                   </div>
                 </div>
               </div>
 
-              <div class="col s12 m6 l4 xl3">
+              <div class="col s10 offset-s1 m6 l3 ">
                 <div class="card hoverable">
                   <div class="card-image">
-                    <img class="materialboxed" src="img/Happy-Birthday-Love-Cake.jpg">
-                    <span class="card-title">Card Title</span>
+                    <img class="materialboxed" src="img/galery/nice-cake.png">
+                    <span class="galery__card-title card-title">Протеїновий</span>
                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                   </div>
                   <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    <p class="galery__card-txt">I am a very simple card. I am good at containing small bits of information.</p>
                   </div>
                 </div>
               </div>
 
-              <div class="col s12 m6 l4 xl3">
+              <div class="col s10 offset-s1 m6 l3 ">
                 <div class="card hoverable">
                   <div class="card-image">
-                    <img class="materialboxed" src="img/Happy-Birthday-Love-Cake.jpg">
-                    <span class="card-title">Card Title</span>
+                    <img class="materialboxed" src="img/galery/rouse.jpg">
+                    <span class="galery__card-title card-title">Протеїновий</span>
                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                   </div>
                   <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    <p class="galery__card-txt">I am a very simple card. I am good at containing small bits of information.</p>
                   </div>
                 </div>
               </div>
-
-
             </div>
           </div>
         </section>
 
         <section id="contacts" class="contacts section container scrollspy">
-          <h2 class="center">Контакти:</h2>
+          <h2 class="contacts__title center">Контакти:</h2>
           <div class="row valign-wrapper">
-            <form class="col m5">
+            <form class="contacts__form col s12 m6 l5">
 
-              <legend>Заповніть цю форму щоб ми змогли зконтактуватись з вами</legend>
+              <legend class="contacts__text">Заповніть цю форму щоб ми змогли зконтактувати з вами</legend>
+              <legend class="contacts__text hide-on-large-only contacts__text--mobil">Напишіть нам:</legend>
+
               <!-- <div class="row"> -->
-                <div class="input-field col m12">
+                <div class="input-field col s12 m12">
                   <i class="material-icons prefix">account_circle</i>
                   <input id="icon_prefix" type="text" class="validate">
                   <label for="icon_prefix">імя</label>
                 </div>
-                <div class="input-field col m6">
+                <div class="input-field col s6 m12 l6">
                   <i class="material-icons prefix">phone</i>
                   <input id="icon_telephone" type="tel" class="validate">
                   <label for="icon_telephone">тел.</label>
                 </div>
-                <div class="input-field col m6">
+                <div class="hide-on-med-only input-field col s6 m12 l6">
                   <i class="material-icons prefix">mail_outline</i>
                   <input id="email" type="email" class="validate">
-                  <label for="email">Ваш email</label>
+                  <label for="email">email</label>
                   <!-- <span class="helper-text" data-error="wrong" data-success="right">Відповімо поштою</span> -->
                 </div>
-                <div class="input-field col m12">
+                <div class="input-field col s12 m12">
                   <i class="material-icons prefix">mode_edit</i>
                   <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
                   <label for="icon_prefix2">мене цікавить...</label>
                 </div>
-                <button class="btn waves-effect waves-light btn-large col m10 offset-m1" type="submit" name="action">Відправити
+                <button class="btn waves-effect waves-light btn-large col s12 m10 offset-m1" type="submit" name="action">Відправити
                   <i class="material-icons right">send</i>
                 </button>
               <!-- </div> -->
             </form>
 
-            <div class="col m6 offset-m1">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29268.341913791915!2d23.969881136691384!3d49.81295984327355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae775b1900001%3A0x7896a730c551a59e!2sTov+Sknylivok!5e0!3m2!1sen!2sua!4v1523714796128" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="contacts__map-wrap col s12 offset-s0 m6 offset-m0 l6 offset-l1">
+              <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29268.341913791915!2d23.969881136691384!3d49.81295984327355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae775b1900001%3A0x7896a730c551a59e!2sTov+Sknylivok!5e0!3m2!1sen!2sua!4v1523714796128"  frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
         </section>
@@ -263,41 +264,54 @@
       <footer class="page-footer">
           <div class="container">
             <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Приєднюйся:</h5>
-                <!-- <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p> -->
-                <p>
-                  <a class="btn-floating btn-large waves-effect waves-light lime accent-1">
-                    <svg class="svg-style" width="56px" height="56px">
-                      <use xlink:href="#icon-fb"></use>
-                    </svg>
-                  </a>
-                  <a class="btn-floating btn-large waves-effect waves-light lime accent-1">
-                    <svg class="svg-style" width="56px" height="56px">
-                      <use xlink:href="#icon-insta"></use>
-                    </svg>
-                  </a>
-                </p>
+              <div class="col s10 offset-s1 m4 offset-m0 l5 offset-l1">
+                <h5 class="page-footer__title white-text">Приєднюйся:</h5>
+                <ul class="page-footer__soc-content">
+                  <li class="page-footer__soc-icon">
+                    <a class="page-footer__soc-item btn-floating btn-large waves-effect waves-light lime accent-1">
+                      <svg class="svg-style" width="56px" height="56px">
+                        <use xlink:href="#icon-fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="page-footer__soc-icon">
+                    <a class="page-footer__soc-item btn-floating btn-large waves-effect waves-light lime accent-1">
+                      <svg class="svg-style" width="56px" height="56px">
+                        <use xlink:href="#icon-insta"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">меню</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Про нас</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Переваги</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Галерея</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Контакти</a></li>
+              <div class="col s10 offset-s1 m4 offset-m4 l3 offset-l1">
+                <h5 class="page-footer__title page-footer__title--menu white-text">Меню:</h5>
+                <ul class="page-footer__menu">
+                  <li class="page-footer__menu-item  col s6 m6 l6">
+                    <a class="grey-text text-lighten-3" href="#!">Про нас</a>
+                  </li>
+                  <li class="page-footer__menu-item col s6 m6 l6">
+                    <a class="grey-text text-lighten-3" href="#!">Переваги</a>
+                  </li>
+                  <li class="page-footer__menu-item col s6 m6 l6">
+                    <a class="grey-text text-lighten-3" href="#!">Галерея</a>
+                  </li>
+                  <li class="page-footer__menu-item col s6 m6 l6">
+                    <a class="grey-text text-lighten-3" href="#!">Контакти</a>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2018 tortik.ga
-            <a class="grey-text text-lighten-4 right" href="#!">розроблено:
-              <svg class="admin-ico" width="35px" height="35px">
-                <use xlink:href="#icon-face_smile"></use>
-              </svg>
-            </a>
+              <div class="valign-wrapper">
+              © 2018 tortik.ga
+              <a class="footer-copyright__autor grey-text text-lighten-4 right" href="#!"><span>розроблено:</span>
+                <svg class="admin-ico" width="35px" height="35px">
+                  <use xlink:href="#icon-face_smile"></use>
+                </svg>
+              </a>
+            </div>
             </div>
           </div>
       </footer>
@@ -345,13 +359,15 @@
       <script>
         $(document).ready(function(){
           $('.scrollspy').scrollSpy();
+          // $('.carousel').carousel();
+
           $('.sidenav').sidenav();
           $('.materialboxed').materialbox();
           $('.slider').slider({
-            indicators:false,
+            // indicators:false,
             duration:1000,
-            interval:6000,
-            // height:700,
+            interval:26000,
+            // height: false,
           });
         });
       </script>

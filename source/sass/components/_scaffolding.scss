@@ -2,8 +2,7 @@ body {
   min-width: 320px;
   font-family: 'Arial', sans-serif;
 
-
-  // font-size: 15px;
+  // font-size: 18px;
   // line-height: 24px;
   // font-family: "Open Sans", sans-serif;
   // font-style: normal;
@@ -30,4 +29,11 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.sprite-svg {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  width: 0;
 }
