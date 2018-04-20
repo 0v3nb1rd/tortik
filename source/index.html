@@ -28,7 +28,7 @@
               <li><a class="navigation__item" href="#contacts">Контакти</a></li>
             </ul>
           </div>
-          <a class="btn-popup-itm btn-call btn-floating btn-large halfway-fab waves-effect pulse waves-light teal basket-btn">
+          <a class="basket-btn btn-popup-itm btn-call btn-floating btn-large halfway-fab waves-effect pulse waves-light teal">
             <i class="material-icons">local_grocery_store</i>
           </a>
         </div>
@@ -258,7 +258,6 @@
             </div>
           </div>
         </section>
-
       </main>
 
       <footer class="page-footer">
@@ -316,37 +315,35 @@
           </div>
       </footer>
 
-      <!-- <div class="section container">
-        <div class="row">
-          <div class="col s12 m8 offset-m2 l6 offset-l3 xl4 offset-xl4">
-            <div class="card login-wrapper">
-              <div class="card-content">
+      <div class="popup-form">
+        <div class="popup-form__cont">
+          <div  class="popup-form__wrap card login-wrapper scale-transition">
+            <div class="card-content z-depth-5">
 
-                <form class="popup">
-                  <h4 class="center">Замовити тортик:</h4>
-                  <div class="input-field">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="popup__name" type="text" class="validate" required>
-                    <label for="popup__name">Імя*</label>
-                  </div>
-                  <div class="input-field">
-                    <i class="material-icons prefix">phone</i>
-                    <input id="popup__tel" type="tel" class="validate" required>
-                    <label for="popup__tel">Тел.*</label>
-                  </div>
-                  <div class="input-field">
-                    <i class="material-icons prefix">textsms</i>
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Текст</label>
-                  </div>
-                  <input type="submit" class="btn-large z-depth-0 popup__submit" value="відправити">
-                </form>
+              <form class="popup">
+                <h4 class="popup-form__title center">Замовити тортик:</h4>
+                <div class="input-field">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="popup__name" type="text" class="validate" name="name" required>
+                  <label for="popup__name">Імя*</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="popup__tel" type="tel" class="validate" name="tel" required>
+                  <label for="popup__tel">Тел.*</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">textsms</i>
+                  <textarea id="textarea1" class="materialize-textarea" name="text"></textarea>
+                  <label for="textarea1">Текст</label>
+                </div>
+                <input type="submit" class="btn-large z-depth-0 popup__submit" value="відправити">
+              </form>
 
-              </div>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
 
       <!-- Scaled in -->
 
@@ -354,9 +351,63 @@
 
 
       <!--JavaScript at end of body for optimized loading-->
+      <script>
+        var link = document.querySelector(".basket-btn"),
+            form = document.querySelector(".popup-form"),
+            anima = form.querySelector(".popup-form__wrap"),
+            tel = form.querySelector("[name=name]"),
+            phone = form.querySelector("[name=tel]"),
+            text = form.querySelector("[name=text]");
+
+        // form.classList.add("popup-form--none");
+
+        link.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          if (!form.classList.contains("popup-form--show")) {
+            form.classList.add("popup-form--show");
+            anima.classList.add("scale-out");
+            setTimeout(function() {
+              anima.classList.add("scale-in"); }, 5);
+
+            // form.classList.remove("modal-error");
+            // form.classList.remove("popup-form--none");
+            tel.focus();
+          } else {
+            form.classList.remove("popup-form--show");
+          }
+        });
+
+        form.addEventListener("submit", function(evt) {
+          if (!tel.value || !phone.value) {
+              evt.preventDefault();
+              form.classList.add("modal-error");
+              // console.log("error");
+            }
+        });
+
+        window.addEventListener("keydown", function(evt) {
+          if (evt.keyCode === 27 ) {
+            if(form.classList.contains("popup-form--show")) {
+              anima.classList.remove("scale-in");
+              setTimeout(function() {
+                form.classList.remove("popup-form--show"); }, 50);
+            }
+          }
+        });
+
+        window.onclick = function(event) {
+            if (event.target == form) {
+                anima.classList.remove("scale-in");
+                setTimeout(function() {
+                  form.classList.remove("popup-form--show"); }, 50);
+              };
+            }
+
+      </script>
       <script type="text/javascript" src="js/bin/jquery-3.3.1.min.js"></script>
       <script type="text/javascript" src="js/bin/materialize.min.js"></script>
       <script>
+
         $(document).ready(function(){
           $('.scrollspy').scrollSpy();
           // $('.carousel').carousel();
