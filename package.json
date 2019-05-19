@@ -2,6 +2,7 @@
   "name": "mishka",
   "version": "13.0.0",
   "private": true,
+  "author": "0v3n",
   "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
@@ -52,6 +53,7 @@
     "node": "8.9"
   },
   "dependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "npm": "^6.9.0"
   }
 }

@@ -1,38 +1,48 @@
 <!DOCTYPE html>
-  <html>
+  <html lang="uk">
     <head>
       <!--Import Google Icon Font-->
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="favicon.ico">
+      <meta name="description" content="Tortiki.tk - торти на замовлення">
+      <title>Найсмачніші тортики Львова</title>
+
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
 
       <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
     <body>
       <div class="sprite-svg">
         <include src="build/img/sprite.svg"></include>
       </div>
-      <nav>
-        <div class="nav-wrapper">
-          <div class="container">
-            <a class="brand-logo">
-              <img class="logotype" src="img/logo.svg" alt="Tortik logo" height="64">
+
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <div class="container">
+              <a class="brand-logo">
+                <img class="logotype" src="img/logo.svg" alt="Tortik logo" height="64">
+              </a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">dehaze</i></a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="navigation__item" href="#about-us">ПРО НАС</a></li>
+                <li><a class="navigation__item" href="#price">ЦІНИ</a></li>
+                <li><a class="navigation__item" href="#galery">ГАЛЕРЕЯ</a></li>
+                <li><a class="navigation__item" href="#contacts">КОНТАКТИ</a></li>
+              </ul>
+            </div>
+            <a class="basket-btn btn-popup-itm btn-call btn-floating btn-large halfway-fab waves-effect pulse waves-light teal">
+              <i class="material-icons">local_grocery_store</i>
             </a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">dehaze</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a class="navigation__item" href="#about-us">Про нас</a></li>
-              <li><a class="navigation__item" href="#galery">Галерея</a></li>
-              <li><a class="navigation__item" href="#contacts">Контакти</a></li>
-            </ul>
           </div>
-          <a class="basket-btn btn-popup-itm btn-call btn-floating btn-large halfway-fab waves-effect pulse waves-light teal">
-            <i class="material-icons">local_grocery_store</i>
-          </a>
-        </div>
-      </nav>
+        </nav>
+      </div>
       <ul class="sidenav" id="mobile-demo">
         <li><a href="#about-us">Про нас</a></li>
         <li><a href="#galery">Галерея</a></li>
@@ -78,13 +88,13 @@
           <p class="about-us__text-other">
             Вас вітає <b>tortik.ga</b> стильна кондитерська з молодим, амбітним колективом.<br>
             Ми готові робити для Вас яскраві, оригінальні вироби з тіста: торти, капкейкі, макаруни, печиво та багато іншого.<br>
-            Тільки індивідуальний підхід до кожного замовника, тільки виняткові смаки, тільки якісна сировина!
+            <span class="hide-on-small-only" >Тільки індивідуальний підхід до кожного замовника, тільки виняткові смаки, тільки якісна сировина!</span>
           </p>
           <!-- <p>Наші торти призначені для тих, хто ще молодий душею і шалено щасливий поласувати смачним десертом! Торт на замовлення Київ - швидка і легка можливість отримати вишукані і барвистий десерт в необхідний Вам термін! Вам слід просто подзвонити нам, і ми обговоримо з Вами дизайн і начинку Вашого персонального святкового торта. Свіжі і казкові кондитерські вироби будуть доставлені прямо до Ваших дверей або до місця, де Ви плануєте відзначати Ваше подія!</p> -->
           <a class="about-us__btn waves-effect waves-teal btn-large white grey-text">Замовити</a>
         </section>
 
-        <section class="price materialize-red lighten-2">
+        <section id="price" class="price materialize-red lighten-2 scrollspy">
           <div class="container price__container">
             <div class="row">
               <div class="price__text-wrap white-text col s12 m6 l6 ">
@@ -161,11 +171,11 @@
           <div class="container galery__container">
             <h2 class="galery__title center white-text">Тортики:</h2>
 
-            <div class="row">
-              <div class=" col s10 offset-s1 m6 l3">
+            <div class="row galery__wrap">
+              <div class="col s10 offset-s1 m6 l3">
                 <div class="card hoverable">
                   <div class="card-image">
-                    <img class="materialboxed" src="img/galery/cake-flower.jpg">
+                    <img class="materialboxed" src="img/galery/cake-flower.jpg" alt="cake flowwer">
                     <span class="galery__card-title card-title">Протеїновий</span>
                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                   </div>
@@ -175,10 +185,10 @@
                 </div>
               </div>
 
-              <div class="col s10 offset-s1 m6 l3 ">
+              <div class="col s10 offset-s1 m6 l3">
                 <div class="card hoverable">
                   <div class="card-image">
-                    <img class="materialboxed" src="img/galery/cake-children.jpg">
+                    <img class="materialboxed" src="img/galery/cake-children.jpg" alt="cake children">
                     <span class="galery__card-title card-title">Протеїновий</span>
                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                   </div>
@@ -188,10 +198,10 @@
                 </div>
               </div>
 
-              <div class="col s10 offset-s1 m6 l3 ">
+              <div class="col s10 offset-s1 m6 l3">
                 <div class="card hoverable">
                   <div class="card-image">
-                    <img class="materialboxed" src="img/galery/nice-cake.png">
+                    <img class="materialboxed" src="img/galery/nice-cake.png" alt="nice cake">
                     <span class="galery__card-title card-title">Протеїновий</span>
                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                   </div>
@@ -201,10 +211,10 @@
                 </div>
               </div>
 
-              <div class="col s10 offset-s1 m6 l3 ">
+              <div class="col s10 offset-s1 m6 l3">
                 <div class="card hoverable">
                   <div class="card-image">
-                    <img class="materialboxed" src="img/galery/rouse.jpg">
+                    <img class="materialboxed" src="img/galery/rouse.jpg" alt="rouse">
                     <span class="galery__card-title card-title">Протеїновий</span>
                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                   </div>
@@ -221,40 +231,43 @@
           <h2 class="contacts__title center">Контакти:</h2>
           <div class="row valign-wrapper">
             <form class="contacts__form col s12 m6 l5">
+              <fieldset>
 
               <legend class="contacts__text">Заповніть цю форму щоб ми змогли зконтактувати з вами</legend>
-              <legend class="contacts__text hide-on-large-only contacts__text--mobil">Напишіть нам:</legend>
+              <!-- <legend class="contacts__text hide-on-large-only contacts__text- -mobil">Напишіть нам:</legend> -->
 
               <!-- <div class="row"> -->
                 <div class="input-field col s12 m12">
                   <i class="material-icons prefix">account_circle</i>
-                  <input id="icon_prefix" type="text" class="validate">
+                  <input id="icon_prefix" type="text" class="validate" name="name2">
                   <label for="icon_prefix">імя</label>
                 </div>
                 <div class="input-field col s6 m12 l6">
                   <i class="material-icons prefix">phone</i>
-                  <input id="icon_telephone" type="tel" class="validate">
+                  <input id="icon_telephone" type="tel" class="validate" name="tel2">
                   <label for="icon_telephone">тел.</label>
                 </div>
                 <div class="hide-on-med-only input-field col s6 m12 l6">
                   <i class="material-icons prefix">mail_outline</i>
-                  <input id="email" type="email" class="validate">
+                  <input id="email" type="email" class="validate" name="mail2">
                   <label for="email">email</label>
                   <!-- <span class="helper-text" data-error="wrong" data-success="right">Відповімо поштою</span> -->
                 </div>
                 <div class="input-field col s12 m12">
                   <i class="material-icons prefix">mode_edit</i>
-                  <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                  <textarea id="icon_prefix2" class="materialize-textarea" name="text2"></textarea>
                   <label for="icon_prefix2">мене цікавить...</label>
                 </div>
-                <button class="btn waves-effect waves-light btn-large col s12 m10 offset-m1" type="submit" name="action">Відправити
+                <div id="form_result2"></div>
+                <button id="submit-cont" class="btn waves-effect waves-light btn-large col s12 m10 offset-m1" type="submit" name="action">Відправити
                   <i class="material-icons right">send</i>
                 </button>
               <!-- </div> -->
+              </fieldset>
             </form>
 
             <div class="contacts__map-wrap col s12 offset-s0 m6 offset-m0 l6 offset-l1">
-              <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29268.341913791915!2d23.969881136691384!3d49.81295984327355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae775b1900001%3A0x7896a730c551a59e!2sTov+Sknylivok!5e0!3m2!1sen!2sua!4v1523714796128"  frameborder="0" allowfullscreen></iframe>
+              <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29268.341913791915!2d23.969881136691384!3d49.81295984327355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae775b1900001%3A0x7896a730c551a59e!2sTov+Sknylivok!5e0!3m2!1sen!2sua!4v1523714796128" allowfullscreen></iframe>
             </div>
           </div>
         </section>
@@ -267,8 +280,9 @@
                 <h5 class="page-footer__title white-text">Приєднюйся:</h5>
                 <ul class="page-footer__soc-content">
                   <li class="page-footer__soc-icon">
+
                     <a class="page-footer__soc-item btn-floating btn-large waves-effect waves-light lime accent-1">
-                      <svg class="svg-style" width="56px" height="56px">
+                      <svg class="svg-style svg-style--fb" width="56px" height="56px">
                         <use xlink:href="#icon-fb"></use>
                       </svg>
                     </a>
@@ -304,7 +318,7 @@
           <div class="footer-copyright">
             <div class="container">
               <div class="valign-wrapper">
-              © 2018 tortik.ga
+              © 2018 tortiki.tk
               <a class="footer-copyright__autor grey-text text-lighten-4 right" href="#!"><span>розроблено:</span>
                 <svg class="admin-ico" width="35px" height="35px">
                   <use xlink:href="#icon-face_smile"></use>
@@ -317,19 +331,21 @@
 
       <div class="popup-form">
         <div class="popup-form__cont">
-          <div  class="popup-form__wrap card login-wrapper scale-transition">
+          <div class="popup-form__wrap card login-wrapper scale-transition">
             <div class="card-content z-depth-5">
+              <a class="popup-form__close btn-floating waves-effect waves-light red"><i class="material-icons">close</i></a>
+
 
               <form class="popup">
                 <h4 class="popup-form__title center">Замовити тортик:</h4>
                 <div class="input-field">
                   <i class="material-icons prefix">account_circle</i>
-                  <input id="popup__name" type="text" class="validate" name="name" required>
+                  <input id="popup__name" type="text" class="validate" name="name" required="">
                   <label for="popup__name">Імя*</label>
                 </div>
                 <div class="input-field">
                   <i class="material-icons prefix">phone</i>
-                  <input id="popup__tel" type="tel" class="validate" name="tel" required>
+                  <input id="popup__tel" type="tel" class="validate" name="tel" required="">
                   <label for="popup__tel">Тел.*</label>
                 </div>
                 <div class="input-field">
@@ -337,7 +353,8 @@
                   <textarea id="textarea1" class="materialize-textarea" name="text"></textarea>
                   <label for="textarea1">Текст</label>
                 </div>
-                <input type="submit" class="btn-large z-depth-0 popup__submit" value="відправити">
+                <div id="form_result"></div>
+                <input id="submit" type="submit" class="btn-large z-depth-0 popup__submit" value="відправити">
               </form>
 
             </div>
@@ -345,21 +362,16 @@
         </div>
       </div>
 
-      <!-- Scaled in -->
-
-
-
-
-      <!--JavaScript at end of body for optimized loading-->
       <script>
         var link = document.querySelector(".basket-btn"),
+            order = document.querySelector(".about-us__btn"),
+            close = document.querySelector(".popup-form__close"),
             form = document.querySelector(".popup-form"),
             anima = form.querySelector(".popup-form__wrap"),
             tel = form.querySelector("[name=name]"),
             phone = form.querySelector("[name=tel]"),
             text = form.querySelector("[name=text]");
 
-        // form.classList.add("popup-form--none");
 
         link.addEventListener("click", function (evt) {
           evt.preventDefault();
@@ -368,13 +380,30 @@
             anima.classList.add("scale-out");
             setTimeout(function() {
               anima.classList.add("scale-in"); }, 5);
-
-            // form.classList.remove("modal-error");
-            // form.classList.remove("popup-form--none");
             tel.focus();
           } else {
             form.classList.remove("popup-form--show");
           }
+        });
+
+        order.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          if (!form.classList.contains("popup-form--show")) {
+            form.classList.add("popup-form--show");
+            anima.classList.add("scale-out");
+            setTimeout(function() {
+              anima.classList.add("scale-in"); }, 5);
+            tel.focus();
+          } else {
+            form.classList.remove("popup-form--show");
+          }
+        });
+
+        close.addEventListener("click", function(evt) {
+          evt.preventDefault();
+          anima.classList.remove("scale-in");
+          setTimeout(function() {
+                form.classList.remove("popup-form--show"); }, 50);
         });
 
         form.addEventListener("submit", function(evt) {
@@ -394,20 +423,12 @@
             }
           }
         });
-
-        window.onclick = function(event) {
-            if (event.target == form) {
-                anima.classList.remove("scale-in");
-                setTimeout(function() {
-                  form.classList.remove("popup-form--show"); }, 50);
-              };
-            }
-
       </script>
-      <script type="text/javascript" src="js/bin/jquery-3.3.1.min.js"></script>
-      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
-      <script>
 
+      <script src="js/bin/jquery-3.3.1.min.js"></script>
+      <script src="js/bin/materialize.min.js"></script>
+
+      <script>
         $(document).ready(function(){
           $('.scrollspy').scrollSpy();
           // $('.carousel').carousel();
@@ -415,11 +436,55 @@
           $('.sidenav').sidenav();
           $('.materialboxed').materialbox();
           $('.slider').slider({
-            // indicators:false,
+            indicators:false,
             duration:1000,
             interval:26000,
-            // height: false,
+            height: false,
           });
+        });
+
+        $("#submit").click(function(event) {
+          event.preventDefault();
+          var name = $('input[name=name]').val();
+          var tel = $('input[name=tel]').val();
+          var message = $('textarea[name=text]').val();
+          var otpravka = true;
+        if(name==""){
+        otpravka = false;
+        }
+        if(tel==""){
+        otpravka = false;
+        }
+        if(otpravka) {
+          dannie = {'polz_name':name, 'polz_tel':tel, 'text':message};
+          $.post('mail.php', dannie, function(otvet){
+          rezultat = '<div style="color:#88D095","font-size:18px">'+otvet.text+'</div>';
+          $("#form_result").hide().html(rezultat).slideDown();
+          }, 'json');
+        }
+        });
+
+        $("#submit-cont").click(function(event) {
+          event.preventDefault();
+          var name = $('input[name=name2]').val();
+          var tel = $('input[name=tel2]').val();
+          var mail = $('input[name=mail2').val();
+          var message = $('textarea[name=text2]').val();
+          var otpravka = true;
+        if(name==""){
+          otpravka = false;
+        }
+        if(tel==""){
+          otpravka = false;
+        }
+        if(otpravka) {
+                    console.log("дякую");
+          dannie = {'polz_name':name, 'polz_tel':tel, 'email':mail, 'text':message};
+          $.post('mail.php', dannie, function(otvet){
+          rezultat = '<div style="color:#88D095","font-size:18px">'+otvet.text+'</div>';
+          $("#form_result2").hide().html(rezultat).slideDown();
+          }, 'json');
+        }
         });
       </script>
     </body>

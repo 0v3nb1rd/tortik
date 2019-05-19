@@ -1,9 +1,9 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var plumber = require("gulp-plumber");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
+var gulp = require("gulp"),
+		sass = require("gulp-sass"),
+	 	plumber = require("gulp-plumber"),
+		postcss = require("gulp-postcss"),
+		autoprefixer = require("autoprefixer"),
+		server = require("browser-sync").create();
 
 var csso = require("gulp-csso"),
     run =require("run-sequence"),
@@ -30,7 +30,8 @@ gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/css/**.css",
-    "source/js/**/*.js"], {
+    "source/img/**/*",
+    "source/js/bin/*.js"], {
       base: "./source/"
     })
   .pipe(gulp.dest("build"));
@@ -71,7 +72,6 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-
 gulp.task("serve", function() {
   server.init({
     server: "build/",
@@ -94,7 +94,7 @@ gulp.task("minjs", function() {
     path.extname = ".js"
   }))
   .pipe(gulp.dest("build/js"))
-})
+});
 
 gulp.task("imgmin", function() {
   return gulp.src("source/img/*.{jpg,png,svg}")
@@ -114,12 +114,12 @@ gulp.task("webp", function() {
   .pipe(gulp.dest("build/img/webp"));
 });
 
-// gulp.task("build", function(done) {
-//   run(
-//     "clear", "copy", "imgmin",
-//     "style", "sprite", "html",
-//     /*"minjs",*/ "webp", done);
-// });
+gulp.task("build", function(done) {
+  run(
+    "clear", "copy", /*"imgmin",*/
+    "style", "sprite", "html",
+    /*"minjs",*/ "webp", done);
+});
 
 gulp.task("minify", function() {
   return gulp.src("build/*.html")
@@ -133,7 +133,5 @@ gulp.task("valid", function() {
   .pipe(htmlhint.failAfterError());
 });
 
-
-
-gulp.task("build", gulp.series("clear", "copy", "imgmin", "style", "sprite", "html", /*"minjs",*/ "webp"));
-gulp.task("default", gulp.series("build", "serve"));
+gulp.task("build", gulp.series("clear", "copy", /*"imgmin",*/ "style", "sprite", "html", /*"minjs",*/ "webp"));
+gulp.task("default", gulp.series("build" ,"serve"));
