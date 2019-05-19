@@ -1,5 +1,3 @@
-"use strict";
-
 var gulp = require("gulp");
 var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
@@ -57,7 +55,7 @@ gulp.task("html", function() {
 
 //////////////////////////////////////////////////////////
 gulp.task("style", function() {
-  gulp.src("source/sass/style.scss")
+  return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sass({
       outputStyle: 'expanded',
@@ -82,8 +80,8 @@ gulp.task("serve", function() {
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("source/*.html", ["html"]).on("change", server.reload);
+  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("style"));
+  gulp.watch("source/*.html", gulp.series("html")).on("change", server.reload);
 });
 //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -115,12 +113,12 @@ gulp.task("webp", function() {
   .pipe(gulp.dest("build/img/webp"));
 });
 
-gulp.task("build", function(done) {
-  run(
-    "clear", "copy", "imgmin",
-    "style", "sprite", "html",
-    /*"minjs",*/ "webp", done);
-});
+// gulp.task("build", function(done) {
+//   run(
+//     "clear", "copy", "imgmin",
+//     "style", "sprite", "html",
+//     /*"minjs",*/ "webp", done);
+// });
 
 gulp.task("minify", function() {
   return gulp.src("build/*.html")
@@ -133,3 +131,8 @@ gulp.task("valid", function() {
   .pipe(htmlhint())
   .pipe(htmlhint.failAfterError());
 });
+
+
+
+gulp.task("build", gulp.series("clear", "copy", "imgmin", "style", "sprite", "html", /*"minjs",*/ "webp"));
+gulp.task("default", gulp.series("build", "serve"));
